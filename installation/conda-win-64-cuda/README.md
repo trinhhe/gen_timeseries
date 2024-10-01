@@ -18,8 +18,8 @@ for your future users (and yourself).
    Packages are different for different platforms and hardware accelerations,
    so you cannot freeze an environment used for a platform and create it in another.
 
-   The default platform is macOS on Apple Silicon `osx-arm64` to get support for `mps` hardware acceleration
-   (reflected in the name of the directory `conda-osx-arm64-mps` by default).
+   The default platform is macOS on Apple Silicon `win-64` to get support for `mps` hardware acceleration
+   (reflected in the name of the directory `conda-win-64-cuda` by default).
    To edit it, run
    ```bash
    # When in the PROJECT_ROOT directory.
@@ -90,7 +90,7 @@ Create the environment with
 
 ```bash
 # When in the PROJECT_ROOT directory.
-mamba env create --file installation/conda-osx-arm64-mps/environment.yml
+mamba env create --file installation/conda-win-64-cuda/environment.yml
 ```
 
 Install the project with
@@ -171,7 +171,7 @@ After manually editing the `environment.yml` file, you need to recreate the envi
 # When in the PROJECT_ROOT directory.
 mamba deactivate
 mamba env remove --name gen_timeseries
-mamba env create --file installation/conda-osx-arm64-mps/environment.yml
+mamba env create --file installation/conda-win-64-cuda/environment.yml
 mamba activate gen_timeseries
 ```
 
@@ -198,7 +198,7 @@ so it's a good idea to commit the changes to the environment file before and aft
 
 ```bash
 # When in the PROJECT_ROOT directory.
-zsh installation/conda-osx-arm64-mps/update-env-file.sh
+zsh installation/conda-win-64-cuda/update-env-file.sh
 ```
 
 There are some caveats (e.g., packages installed from GitHub with pip), so have a look at

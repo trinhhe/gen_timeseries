@@ -8,7 +8,7 @@
 # if you used complex combinations of channels.
 # In that case you also have to make the edits here or patch the file manually.
 
-ENVIR_FILE="installation/conda-osx-arm64-mps/environment.yml"
+ENVIR_FILE="installation/conda-win-64-cuda/environment.yml"
 conda env export --file "$ENVIR_FILE"
 
 # Delete the path line.

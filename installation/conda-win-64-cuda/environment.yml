@@ -5,11 +5,13 @@ dependencies:
   - python=3.10
   - pip
   - pip:
-      - hatchling
-      - editables
       - hydra-core
       - tqdm
       - wandb
       - pre-commit
       - black
-prefix: /opt/conda/envs/gen_timeseries
+      - scikit-learn
+      - torch
+      - torchvision
+      - torcheval
+      - torchmetrics
